@@ -11,7 +11,6 @@ end
 
 # return all devisors of n excluding 1 and self
 def divisors(n)
-  #your code here
   divs = []
   i = 2
   while i < n
