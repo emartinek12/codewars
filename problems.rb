@@ -8,3 +8,17 @@ end
 def isTriangle(a,b,c)
    a + b > c && a + c > b && c + b > a
 end
+
+# return all devisors of n excluding 1 and self
+def divisors(n)
+  #your code here
+  divs = []
+  i = 2
+  while i < n
+    if (n % i) == 0
+      divs << i
+    end
+      i += 1
+  end
+    divs == [] ? "#{n} is prime" : divs
+end
