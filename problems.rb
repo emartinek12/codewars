@@ -33,21 +33,23 @@
 # number_of_pairs([])
 # number_of_pairs(["red","green","blue","blue","red","green","red","red","red"])
 
-# Check for prime numbers
-def prime?(num)
-  count = 2
-  while count < num do
-    if
-    if (num % count).zero? == true
-      return false
+def prev_mult_of_three(n)
+  # your code here
+  while n != []
+    if n % 3 == 0
+      puts n
     else
-      count += 1
+      new = n.to_s.split('')
+      new.pop
+      n = new.join('').to_i
+      puts n
     end
   end
+  puts -1
 end
 
-puts prime?(4)
-puts prime?(100)
-puts prime?(999)
-puts prime?(958297)
-puts prime?(-7)
+# prev_mult_of_three(1)
+# prev_mult_of_three(25)
+# prev_mult_of_three(36)
+prev_mult_of_three(1244)
+# prev_mult_of_three(952406)
