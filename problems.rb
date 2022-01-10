@@ -33,23 +33,14 @@
 # number_of_pairs([])
 # number_of_pairs(["red","green","blue","blue","red","green","red","red","red"])
 
+# find multiple of 3
 def prev_mult_of_three(n)
-  # your code here
-  while n != []
-    if n % 3 == 0
-      puts n
-    else
-      new = n.to_s.split('')
-      new.pop
-      n = new.join('').to_i
-      puts n
-    end
-  end
-  puts -1
+  (return nil) if n == 0
+  n % 3 == 0 ? n : prev_mult_of_three(n/10)
 end
 
-# prev_mult_of_three(1)
-# prev_mult_of_three(25)
-# prev_mult_of_three(36)
+prev_mult_of_three(1)
+prev_mult_of_three(25)
+prev_mult_of_three(36)
 prev_mult_of_three(1244)
-# prev_mult_of_three(952406)
+prev_mult_of_three(952406)
