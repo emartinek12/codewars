@@ -34,13 +34,38 @@
 # number_of_pairs(["red","green","blue","blue","red","green","red","red","red"])
 
 # find multiple of 3
-def prev_mult_of_three(n)
-  (return nil) if n == 0
-  n % 3 == 0 ? n : prev_mult_of_three(n/10)
+# def prev_mult_of_three(n)
+#   (return nil) if n == 0
+#   n % 3 == 0 ? n : prev_mult_of_three(n/10)
+# end
+
+# prev_mult_of_three(1)
+# prev_mult_of_three(25)
+# prev_mult_of_three(36)
+# prev_mult_of_three(1244)
+# prev_mult_of_three(952406)
+
+# Create dna sequence
+def DNA_strand(dna)
+  #your code here
+  (return []) if dna == []
+  new = []
+  temp = dna.split("")
+  temp.each do |v|
+    case v
+      when 'A'
+        new << 'T'
+      when 'T'
+        new << 'A'
+      when 'C'
+        new << 'G'
+      when 'G'
+        new << 'C'
+    end
+  end
+  return new.join
 end
 
-prev_mult_of_three(1)
-prev_mult_of_three(25)
-prev_mult_of_three(36)
-prev_mult_of_three(1244)
-prev_mult_of_three(952406)
+DNA_strand("AAAA")
+DNA_strand("ATTGC")
+DNA_strand("GTAT")
